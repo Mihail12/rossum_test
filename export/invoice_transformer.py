@@ -68,11 +68,3 @@ class RossumInvoiceTransformer:
         """
         output_xml = self.transform()
         return base64.b64encode(output_xml).decode("utf-8")
-
-    def get_transformed_xml(self):
-        """
-        Provides the transformed XML content as a string.
-
-        :return: Transformed XML content as a string, or None if transformation has not been run.
-        """
-        return self.transformed_xml.decode("utf-8") if self.transformed_xml else None
